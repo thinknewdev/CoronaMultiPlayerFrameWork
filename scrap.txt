@@ -1,0 +1,15 @@
+[[
+local playeravatar = display.loadRemoteImage("http://graph.facebook.com/"..friend.id.."/picture","GET",function( event) 
+--playeravatar 	= 
+--event.target.y = 85 * count
+scrollView:insert(event.target)
+--localGroup:insert(playerstats)
+end , friend.id..".png", system.DocumentsDirectory, 18, (friendBtn.height * count) + 15)
+]]
+local function inviteFB(event)
+	
+
+end
+statusMessage.textObject.text = friend.name
+
+friendBtn:addEventListener("touch", inviteFB)

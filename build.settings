@@ -1,0 +1,50 @@
+-- cpmgen build.settings
+settings =
+{
+	iphone =
+    {
+        plist =
+        {
+             CFBundleIconFile = "Icon.png",
+             CFBundleIconFiles = {
+                    "Icon.png" , 
+                    "Icon@2x.png" , 
+                    "Icon-72.png" , 
+             },
+             UIApplicationExitsOnSuspend = false,	-- must be false for single sign-on to work
+	        CFBundleURLTypes =
+            {
+                {
+                    CFBundleURLSchemes =
+                    {
+                        "fb138294852910700",	-- replace XXXXXXXXX with your facebook appId
+                    }
+                }
+            }
+        }
+        
+    },
+	android =
+	{
+		versionCode = "23"
+	},
+
+	androidPermissions =
+	{
+		"android.permission.ACCESS_NETWORK_STATE",
+		"android.permission.ACCESS_WIFI_STATE",
+		"android.permission.INTERNET",
+		"android.permission.SET_ORIENTATION"
+
+	},
+
+	orientation =
+	{
+		default ="portrait",
+		content = "portrait",
+		supported =
+		{
+			"portrait"
+		},
+	}
+}
